@@ -1,59 +1,12 @@
 let songs = [
-  {song: "escroto", artist: "lamo", duration: 10, genre: "si"}
 ];
 
 window.onload = initialize;
 
 function initialize(){
   const SONG_FORM = document.getElementById("song-form");
-  SONG_FORM.addEventListener("submit", validateSongForm);
+  SONG_FORM.addEventListener("submit", addSong);
 
-}
-
-function validateSongForm(event){
-  let songForm = event.target;
-
-  let song = songForm["song"].value;
-
-  if(!song || song == ""){
-    event.preventDefault();
-    document.getElementById("error-song-required").style.display = "block";
-    console.log("* error: cancion obligatoria");
-  }
-  else{
-    document.getElementById("error-song-required").style.display = "none";
-  }
-
-  let artist = songForm["artist"].value;
-  if(!artist || artist == ""){
-    event.preventDefault();
-    document.getElementById("error-artist-required").style.display = "block";
-    console.log("* error: artista obligatorio");
-  }
-  else{
-    document.getElementById("error-artist-required").style.display = "none";
-  }
-
-  let duration = songForm["duration"].value;
-  if(!duration || duration == ""){
-    event.preventDefault();
-    document.getElementById("error-duration-required").style.display = "block";
-    console.log("* error: duracion obligatoria");
-  }
-  else{
-    document.getElementById("error-duration-required").style.display = "none";
-  }
-
-  let genre = songForm["genre"].value;
-  if(!genre || genre == ""){
-    event.preventDefault();
-    document.getElementById("error-genre-required").style.display = "block";
-    console.log("* error: genre obligatorio");
-  }
-  else{
-    document.getElementById("error-genre-required").style.display = "none";
-  }
-  showSongs();
 }
 
 function addSong(event){
@@ -63,15 +16,58 @@ function addSong(event){
   const ARTIST = event.target.artist.value;
   const GENRE = event.target.genre.value;
   const DURATION = event.target.duration.value;
+  let isValid = true;
 
-  songs.push({
-    song: SONG,
-    artist: ARTIST,
-    genre: GENRE,
-    duration: DURATION
-  })
+  if(!SONG || SONG == ""){
+    event.preventDefault();
+    document.getElementById("error-song-required").style.display = "block";
+    console.log("* error: cancion obligatoria");
+    isValid = false;
+  }
+  else{
+    document.getElementById("error-song-required").style.display = "none";
+  }
 
-  showSongs();
+  if(!ARTIST || ARTIST == ""){
+    event.preventDefault();
+    document.getElementById("error-artist-required").style.display = "block";
+    console.log("* error: artista obligatorio");
+    isValid = false;
+  }
+  else{
+    document.getElementById("error-artist-required").style.display = "none";
+  }
+
+  if(!DURATION || DURATION == ""){
+    event.preventDefault();
+    document.getElementById("error-duration-required").style.display = "block";
+    console.log("* error: duracion obligatoria");
+    isValid = false;
+  }
+  else{
+    document.getElementById("error-duration-required").style.display = "none";
+  }
+
+  if(!GENRE || GENRE == ""){
+    event.preventDefault();
+    document.getElementById("error-genre-required").style.display = "block";
+    console.log("* error: genre obligatorio");
+    isValid = false;
+  }
+  else{
+    document.getElementById("error-genre-required").style.display = "none";
+  }
+
+  if(isValid){
+    songs.push({
+      song: SONG,
+      artist: ARTIST,
+      genre: GENRE,
+      duration: DURATION
+    })
+  
+    showSongs();
+  }
 }
 
 function showSongs(){
