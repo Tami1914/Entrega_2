@@ -53,6 +53,26 @@ body {
   justify-content: center;
 }
 
+#error-song-required{
+  color: red;
+  display: none;
+}
+
+#error-artist-required{
+  color: red;
+  display: none;
+}
+
+#error-duration-required{
+  color: red;
+  display: none;
+}
+
+#error-genre-required{
+  color: red;
+  display: none;
+}
+
 @media screen and (max-height: 450px) {
   .sidenav {
     padding-top: 15px;
