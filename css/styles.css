@@ -263,7 +263,7 @@ body {
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 3.05s;
   }
 
-  .hide.hide-texts {
+  .hide {
     display: none;
   }
 
@@ -421,8 +421,8 @@ body {
 
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) 
-@media only screen and (min-width: 992px) {
+/* Small devices (portrait tablets and large phones, 600px and up)  */
+@media only screen and (max-width: 768px) {
   #header {
     width: 100vw;
     height: 56px;
@@ -534,46 +534,46 @@ body {
     display: flex;
     justify-content: center;
     margin-top: .8em;
-    text-align: center;
   }
 
   .article-image img {
     width: 50%;
     height: 100%;
     object-fit: cover;
-    padding-left: 5em;
   }
 
   #side-menu {
     width: 100vw;
-    height: 4vw;
-    background-color: white;
+    height: 6vh;
+    background-color: #008781;
     z-index: 1000;
     visibility: hidden;
     display: flex;
-    justify-content: start;
+    justify-content: center;
   }
 
   .side-menu-arrow {
-    width: 10vw;
+    width: 15vw;
     padding-left: 1.5em;
+    padding-top: 1em;
   }
 
   .navegation {
+    text-align: center;
+    width: 65vw;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 1vw;
-    margin-top: .1em;
-    width: 75vw;
   }
 
   .navegation a {
-    color: black;
+    color: white;
+    padding-top: 1em;
     text-decoration: none;
   }
 
   .navegation a:hover:not(.active) {
     background-color: aqua;
+
   }
 
   .gender {
@@ -584,25 +584,35 @@ body {
   }
 
   .gender h2 {
+    margin-bottom: .8em;
     text-align: center;
   }
 
   .gender h4 {
     margin-top: .8em;
     margin-bottom: .8em;
+    font-weight: bold;
   }
 
-  .gender p {
-    width: 90vw;
-    text-align: justify;
-    margin-left: .5em;
+  .btn-btn-primary:hover {
+    box-shadow: none;
+    background-color: black;
+    color: white;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 3.05s;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .show {
+    display: block;
   }
 
   .gender li {
     list-style-type: none;
     margin-top: .8em;
     margin-bottom: .8em;
-    margin-left: .8em;
     font-weight: bold;
   }
 
@@ -610,23 +620,21 @@ body {
     display: flex;
     width: 90vw;
     justify-content: center;
-    margin-bottom: 1em;
-
+    margin-bottom: .8em;
   }
 
   .gender-image img {
     width: 50vw;
     display: flex;
-    justify-content: center;
-    object-fit: cover;
   }
 
-  .background {
+  .gender-background {
     background-color: beige;
+    padding: .5em;
   }
 
   .station {
-    width: 90vw;
+    width: 100vw;
   }
 
   .station h2 {
@@ -636,23 +644,25 @@ body {
 
   .station p {
     margin-bottom: .8em;
-    margin-left: 1.8em;
+    margin-left: .9em;
     font-weight: bold;
   }
 
-  .station-image {
-    width: 95vw;
-    align-items: center;
-    margin-left: 1.8vw;
+  .station-background {
+    width: 100%;
   }
 
-  .station-background {
-    width: 90vw;
+  .station-image {
+    width: 92%;
+    margin: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
   }
 
   .station-image img {
-    padding: .1em;
-    margin-left: .5em;
+    flex: 25%;
+    max-width: 25%;
     justify-content: center;
     transition: transform .2s;
   }
@@ -691,7 +701,6 @@ body {
     width: 90vw;
     justify-content: center;
     margin-bottom: .8em;
-
   }
 
   .pod-image img {
@@ -747,10 +756,10 @@ body {
     background-color: beige;
     padding: .5em;
   }
-}*/
+}
 
-/* Large devices (laptops/desktops, 992px and up) 
-@media only screen and (min-width: 992px) {
+/* Large devices (laptops/desktops, 1024px and up)  */
+@media only screen and (min-width: 1024px) {
   #header {
     width: 100vw;
     height: 56px;
@@ -769,7 +778,7 @@ body {
 
   #header h1 {
     color: black;
-    width: 51vw;
+    width: 50vw;
     padding-top: .2em;
     padding-right: 1.8em;
   }
@@ -777,7 +786,7 @@ body {
 
   #header h1:hover {
     color: red;
-    width: 51vw;
+    width: 50vw;
     padding-top: .2em;
     padding-right: 1.8em;
   }
@@ -795,7 +804,7 @@ body {
     text-align: center;
     display: flex;
     justify-content: space-around;
-    margin-top: 1vw;
+    margin-top: 2vw;
   }
 
   .mobile a {
@@ -825,23 +834,22 @@ body {
     display: flex;
     justify-content: space-around;
     flex-direction: column-reverse;
+    margin-left: 1vw;
   }
 
   .article h2 {
+    margin-left: 1em;
     order: 1;
     text-align: center;
-    font-size: xx-large;
   }
 
-  .article-text h4 {
-    width: 100vw;
+  .article h4 {
     margin-top: 1em;
     text-align: center;
-    font-size: large;
   }
 
   .article ul {
-    margin-left: 3em;
+    margin-left: .7em;
     margin-top: 1em;
     list-style: none;
   }
@@ -859,48 +867,50 @@ body {
   }
 
   .article-image {
-    width: 100vw;
+    width: 90vw;
     display: flex;
     justify-content: center;
     margin-top: .8em;
   }
 
   .article-image img {
-    width: 30%;
+    width: 50%;
     height: 100%;
     object-fit: cover;
   }
 
   #side-menu {
     width: 100vw;
-    height: 2vw;
-    background-color: white;
+    height: 6vh;
+    background-color: #008781;
     z-index: 1000;
     visibility: hidden;
     display: flex;
-    justify-content: start;
+    justify-content: center;
   }
 
   .side-menu-arrow {
-    width: 10vw;
+    width: 15vw;
     padding-left: 1.5em;
+    padding-top: 1em;
   }
 
   .navegation {
+    text-align: center;
+    width: 65vw;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 1vw;
-    margin-top: .1em;
-    width: 75vw;
   }
 
   .navegation a {
-    color: black;
+    color: white;
+    padding-top: 1em;
     text-decoration: none;
   }
 
   .navegation a:hover:not(.active) {
     background-color: aqua;
+
   }
 
   .gender {
@@ -911,89 +921,75 @@ body {
   }
 
   .gender h2 {
+    margin-bottom: .8em;
     text-align: center;
-    font-size: xx-large;
   }
 
   .gender h4 {
     margin-top: .8em;
     margin-bottom: .8em;
-    font-size: large;
+    font-weight: bold;
   }
 
   .gender li {
     list-style-type: none;
     margin-top: .8em;
     margin-bottom: .8em;
-    margin-left: .8em;
     font-weight: bold;
-    font-size: large;
-    margin: 1.5em;
   }
 
   .gender-image {
     display: flex;
     width: 90vw;
     justify-content: center;
-    margin-bottom: 1em;
+    margin-bottom: .8em;
   }
 
   .gender-image img {
-    width: 40vw;
+    width: 50vw;
     display: flex;
-    justify-content: center;
-    object-fit: cover;
   }
 
-  .background {
+  .gender-background {
     background-color: beige;
-  }
-
-  .gender p {
-    width: 90vw;
-    text-align: justify;
-    font-size: large;
-    margin-right: 1.5em;
-    margin-left: 1.5em;
+    padding: .5em;
   }
 
   .station {
-    width: 90vw;
+    width: 100vw;
   }
 
   .station h2 {
     margin-bottom: .8em;
     text-align: center;
-    font-size: xx-large;
   }
 
   .station p {
     margin-bottom: .8em;
-    margin-left: 1.8em;
+    margin-left: .9em;
     font-weight: bold;
-    font-size: large;
-  }
-
-  .station-image {
-    width: 95vw;
-    align-items: center;
-    margin-left: 4vw;
   }
 
   .station-background {
-    width: 90vw;
+    width: 100%;
+  }
+
+  .station-image {
+    width: 80%;
+    margin: 1em;
+
   }
 
   .station-image img {
-    padding: .1em;
-    margin-left: .5em;
+    flex: 25%;
+    max-width: 25%;
     justify-content: center;
     transition: transform .2s;
   }
 
   .station-image img:hover {
     justify-content: center;
-    transform: scale(2);
+    transform: scale(1.5);
   }
 
   .podcast {
@@ -1006,13 +1002,11 @@ body {
   .podcast h2 {
     text-align: center;
     margin-bottom: .8em;
-    font-size: xx-large;
   }
 
   .podcast h4 {
     margin-bottom: .8em;
     font-weight: bold;
-    font-size: large;
   }
 
   .podcast li {
@@ -1020,15 +1014,6 @@ body {
     margin-top: .8em;
     margin-bottom: .8em;
     font-weight: bold;
-    font-size: large;
-    margin: 1.5em;
-  }
-
-  .podcast p {
-    font-size: large;
-    text-align: justify;
-    margin-right: 1.5em;
-    margin-left: 1.5em;
   }
 
   .pod-image {
@@ -1036,11 +1021,10 @@ body {
     width: 90vw;
     justify-content: center;
     margin-bottom: .8em;
-
   }
 
   .pod-image img {
-    width: 30vw;
+    width: 50vw;
     display: flex;
 
   }
@@ -1060,13 +1044,11 @@ body {
   .artist h2 {
     text-align: center;
     margin-bottom: .8em;
-    font-size: xx-large;
   }
 
   .artist h4 {
     margin-bottom: .8em;
     font-weight: bold;
-    font-size: large;
   }
 
   .artist li {
@@ -1076,13 +1058,6 @@ body {
     margin: 1.5em;
     list-style-type: none;
     font-weight: bold;
-    font-size: large;
-  }
-
-  .artist p {
-    font-size: large;
-    margin-right: 1.5em;
-    margin-left: 1.5em;
   }
 
   .artist-image {
@@ -1093,7 +1068,7 @@ body {
   }
 
   .artist-image img {
-    width: 30vw;
+    width: 50vw;
     display: flex;
   }
 
@@ -1101,4 +1076,4 @@ body {
     background-color: beige;
     padding: .5em;
   }
-}*/
+}
