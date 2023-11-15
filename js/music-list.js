@@ -76,7 +76,7 @@ function showSongs(){
   SONG_LIST.innerHTML = "";
 
   for(let i = 0; i < songs.length; i++){
-    SONG_LIST.innerHTML += `<li>${songs[i].genre} - ${songs[i].song} - ${songs[i].artist} - ${songs[i].duration} <button onclick="deleteSong(${i})">DELETE</button></li>`;
+    SONG_LIST.innerHTML += `<li>${songs[i].genre} - ${songs[i].song} - ${songs[i].artist} - ${songs[i].duration} <button onclick="deleteSong(${i})" class="btn btn-primary">DELETE</button></li>`;
   }
 }
 

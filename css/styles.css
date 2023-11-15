@@ -9,6 +9,24 @@ body {
   overflow-x: hidden;
 }
 
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10em;
+}
+
+.row{
+  width: 35vw;
+}
+
+.col-sm-6{
+  width: 100%;
+}
+
+#song-form {
+  width: 50%;
+}
+
 .sidenav {
   height: 100%;
   width: 0;
@@ -501,7 +519,6 @@ body {
   }
 
   .article h2 {
-    margin-left: 1em;
     order: 1;
     text-align: center;
   }
@@ -530,7 +547,7 @@ body {
   }
 
   .article-image {
-    width: 90vw;
+    width: 100vw;
     display: flex;
     justify-content: center;
     margin-top: .8em;
@@ -643,21 +660,21 @@ body {
   }
 
   .station p {
-    margin-bottom: .8em;
-    margin-left: .9em;
+    margin: .8em;
     font-weight: bold;
   }
 
+  /** To center image **/
   .station-background {
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .station-image {
-    width: 92%;
-    margin: 1em;
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
   }
 
   .station-image img {
@@ -834,7 +851,6 @@ body {
     display: flex;
     justify-content: space-around;
     flex-direction: column-reverse;
-    margin-left: 1vw;
   }
 
   .article h2 {
@@ -867,7 +883,7 @@ body {
   }
 
   .article-image {
-    width: 90vw;
+    width: 100vw;
     display: flex;
     justify-content: center;
     margin-top: .8em;
@@ -910,7 +926,6 @@ body {
 
   .navegation a:hover:not(.active) {
     background-color: aqua;
-
   }
 
   .gender {
@@ -953,6 +968,10 @@ body {
   .gender-background {
     background-color: beige;
     padding: .5em;
+  }
+
+  .btn.btn-primary.read-more-btns{
+    display: none;
   }
 
   .station {
