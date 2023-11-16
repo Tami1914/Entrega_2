@@ -7,7 +7,27 @@ body {
   font-family: "Lato", sans-serif;
   background-image: url(https://static.vecteezy.com/system/resources/previews/001/736/035/non_2x/light-green-background-with-colorful-stars-vector.jpg);
   overflow-x: hidden;
+  /* --sb-track-color: #b4de93;
+  --sb-thumb-color: #bd1451;
+  --sb-size: 10px;
+
+  scrollbar-color: var(--sb-thumb-color) 
+                   var(--sb-track-color); */
 }
+/* 
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 10px;
+} */
 
 .container{
   display: flex;
@@ -441,6 +461,7 @@ body {
 
 /* Small devices (portrait tablets and large phones, 600px and up)  */
 @media only screen and (max-width: 768px) {
+
   #header {
     width: 100vw;
     height: 56px;
@@ -849,23 +870,37 @@ body {
 
   .article {
     display: flex;
-    justify-content: space-around;
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
-
-  .article h2 {
-    margin-left: 1em;
-    order: 1;
+  
+  .article-title {
+    width: 100%;
+  }
+  .article-title h2 {
     text-align: center;
+    margin-bottom: 1em;
+    font-size: xx-large;
+  }
+  
+  .article-content {
+    display: flex;
+    width: 100%;
   }
 
-  .article h4 {
+  .article-text{
+    width: 50%;
+    box-sizing: border-box;
+  }
+
+  .article-text h4 {
+    width: 100%;
     margin-top: 1em;
     text-align: center;
+    font-size: x-large;
   }
 
   .article ul {
-    margin-left: .7em;
+    margin-left: 8em;
     margin-top: 1em;
     list-style: none;
   }
@@ -876,21 +911,16 @@ body {
 
   .article a {
     color: black;
-  }
-
-  .article-text {
-    width: 90vw;
+    font-size:large;
   }
 
   .article-image {
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    margin-top: .8em;
-  }
-
-  .article-image img {
     width: 50%;
+    box-sizing: border-box;
+  }
+  
+  .article-image img {
+    width: 70%;
     height: 100%;
     object-fit: cover;
   }
@@ -937,12 +967,15 @@ body {
 
   .gender h2 {
     margin-bottom: .8em;
+    font-size: xx-large;
     text-align: center;
   }
 
   .gender h4 {
     margin-top: .8em;
     margin-bottom: .8em;
+    margin-left: 5em;
+    font-size: x-large;
     font-weight: bold;
   }
 
@@ -950,24 +983,39 @@ body {
     list-style-type: none;
     margin-top: .8em;
     margin-bottom: .8em;
+    font-size: x-large;
     font-weight: bold;
   }
 
   .gender-image {
-    display: flex;
-    width: 90vw;
-    justify-content: center;
-    margin-bottom: .8em;
+    width: 30vw;
+    margin-right: .5em;
   }
 
   .gender-image img {
-    width: 50vw;
+    width: 100%;
+  }
+
+  .gender-content {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
 
   .gender-background {
     background-color: beige;
     padding: .5em;
+    margin-left: 5em;
+    margin-right: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hide-texts {
+    width: 35vw;
+    margin-left: 1em;
+    font-size: large;
   }
 
   .btn.btn-primary.read-more-btns{
@@ -980,34 +1028,43 @@ body {
 
   .station h2 {
     margin-bottom: .8em;
+    font-size: xx-large;
     text-align: center;
   }
 
   .station p {
+    font-size: large ;
     margin-bottom: .8em;
     margin-left: .9em;
+    text-align: center;
     font-weight: bold;
   }
 
   .station-background {
-    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    padding: .5em; 
+    position: relative;
   }
-
+  
   .station-image {
-    width: 80%;
-    margin: 1em;
-
+    width: 90%;
+    box-sizing: border-box; 
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
-
+  
   .station-image img {
-    flex: 25%;
-    max-width: 25%;
-    justify-content: center;
+    flex-basis: calc(23% - .25em); 
+    max-width: calc(23% - .25em); 
+    margin: .10em;
     transition: transform .2s;
+    transform-origin: center center;
   }
-
+  
   .station-image img:hover {
-    justify-content: center;
     transform: scale(1.5);
   }
 
@@ -1020,11 +1077,14 @@ body {
 
   .podcast h2 {
     text-align: center;
+    font-size: xx-large;
     margin-bottom: .8em;
   }
 
   .podcast h4 {
     margin-bottom: .8em;
+    margin-left: 5em;
+    font-size: x-large;
     font-weight: bold;
   }
 
@@ -1032,26 +1092,65 @@ body {
     list-style-type: none;
     margin-top: .8em;
     margin-bottom: .8em;
+    font-size: x-large;
     font-weight: bold;
   }
 
   .pod-image {
-    display: flex;
-    width: 90vw;
-    justify-content: center;
-    margin-bottom: .8em;
+    width: 30vw;
+    margin-right: .5em;
   }
 
   .pod-image img {
-    width: 50vw;
-    display: flex;
+    width: 100%;
+  }
 
+  .pod-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
 
   .pod-background {
     background-color: beige;
     padding: .5em;
+    margin-left: 5em;
+    margin-right: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+  .podcast-p {
+    width: 35vw;
+    margin-left: 1em;
+    font-size: large;
+  }  
+
+  /* .podcast li {
+    list-style-type: none;
+    margin-top: .8em;
+    margin-bottom: .8em;
+    font-weight: bold;
+  } */
+
+  /* .pod-image {
+    display: flex;
+    width: 30vw;
+    justify-content: center;
+    margin-bottom: .8em;
+  } */
+
+  /* .pod-image img {
+    width: 50vw;
+    display: flex;
+
+  } */
+
+  /* .pod-background {
+    background-color: beige;
+    padding: .5em;
+  } */
 
   .artist {
     display: flex;
@@ -1062,37 +1161,53 @@ body {
 
   .artist h2 {
     text-align: center;
+    font-size: xx-large;
     margin-bottom: .8em;
   }
 
   .artist h4 {
     margin-bottom: .8em;
+    margin-left: 5em;
+    font-size: x-large;
     font-weight: bold;
   }
 
   .artist li {
-    display: flex;
-    flex-direction: column;
-    text-align: justify;
-    margin: 1.5em;
     list-style-type: none;
+    margin-top: .8em;
+    margin-bottom: .8em;
+    font-size: x-large;
     font-weight: bold;
   }
 
   .artist-image {
-    display: flex;
-    width: 90vw;
-    justify-content: center;
-    margin-bottom: .8em;
+    width: 30vw;
+    margin-right: .5em;
   }
 
   .artist-image img {
-    width: 50vw;
+    width: 100%;
+  }
+
+  .artist-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
 
   .artist-background {
     background-color: beige;
     padding: .5em;
+    margin-left: 5em;
+    margin-right: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+  .artist-p {
+    width: 35vw;
+    margin-left: 1em;
+    font-size: large;
+  }  
 }

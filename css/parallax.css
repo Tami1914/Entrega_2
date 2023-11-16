@@ -1,0 +1,82 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-image: url(https://static.vecteezy.com/system/resources/previews/001/736/035/non_2x/light-green-background-with-colorful-stars-vector.jpg);
+  overflow-x: hidden;
+  background-color: black;
+  height: 200vh;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.header {
+  width: 100vw;
+  background-color: aquamarine;
+}
+
+.header h2 {
+  display: flex;
+  justify-content: center;
+}
+
+.container-parallax{
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  margin-top: 5em;
+}
+
+#img-parallax {
+  position: relative;
+  width: 50vw;
+}
+
+#img-parallax img {
+  position: absolute;
+  width: 100%;
+  object-fit: contain;
+}
+
+.container{
+  padding: 30em;
+}
