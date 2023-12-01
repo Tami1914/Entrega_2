@@ -7,6 +7,7 @@ body {
   font-family: "Lato", sans-serif;
   background-image: url(https://static.vecteezy.com/system/resources/previews/001/736/035/non_2x/light-green-background-with-colorful-stars-vector.jpg);
   overflow-x: hidden;
+  transition: all .3s;
   /* --sb-track-color: #b4de93;
   --sb-thumb-color: #bd1451;
   --sb-size: 10px;
@@ -14,6 +15,8 @@ body {
   scrollbar-color: var(--sb-thumb-color) 
                    var(--sb-track-color); */
 }
+
+
 /* 
 body::-webkit-scrollbar {
   width: var(--sb-size);
@@ -294,6 +297,18 @@ body::-webkit-scrollbar-thumb {
     font-weight: bold;
   }
 
+  .reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+
   .btn-btn-primary:hover {
     box-shadow: none;
     background-color: black;
@@ -462,6 +477,18 @@ body::-webkit-scrollbar-thumb {
 /* Small devices (portrait tablets and large phones, 600px and up)  */
 @media only screen and (max-width: 768px) {
 
+  .reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
   #header {
     width: 100vw;
     height: 56px;
@@ -798,6 +825,19 @@ body::-webkit-scrollbar-thumb {
 
 /* Large devices (laptops/desktops, 1024px and up)  */
 @media only screen and (min-width: 1024px) {
+  
+  .reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
   #header {
     width: 100vw;
     height: 56px;
