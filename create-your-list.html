@@ -15,9 +15,8 @@
   </div>
 
   <div class="header">
-    <h2>Lista de Música</h2>
+    <span style="font-size:30px;cursor:pointer" id="side-menu-open">&#9776; Crea tu lista</span>
   </div>
-  <span style="font-size:30px;cursor:pointer" id="side-menu-open">&#9776; Menu</span>
 
   <div class="container">
     <form id="song-form" action="create-your-list.html">
@@ -41,34 +40,27 @@
         <input type="text" class="form-control" id="genre" placeholder="Enter genre" name="genre">
         <span id="error-genre-required">* error: genre obligatorio</span>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary" id="btn-add" onclick="AddData()">Submit</button>
+      <button type="submit" class="btn btn-primary" id="btn-update">Update</button>
     </form>
 
-    <form class="update-form">
-      <div class="mb-3 mt-3">
-        <input type="text" class="form-control" id="update-song" placeholder="Enter song" name="u-song">
-      </div>
-      <div class="mb-3">
-        <input type="text" class="form-control" id="update-artist" placeholder="Enter artist" name="u-artist">
-      </div>
-      <div class="mb-3">
-        <input type="text" class="form-control" id="update-duration" placeholder="Enter duration" name="u-duration">
-      </div>
-      <div class="mb-3">
-        <input type="text" class="form-control" id="update-genre" placeholder="Enter genre" name="u-genre">
-      </div>
-    </form>
+  <div>
+    <hr>
+    <table class="table table-bordered" id="table-data">
+      <thead>
+        <tr>
+          <th>Song</th>
+          <th>Artist</th>
+          <th>Duration</th>
+          <th>Genre</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+      </tbody>
+    </table>
+  </div>
 
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="right-side">
-          <h2>Lista de canciones</h2>
-          <ul id="song-list">
-
-          </ul>
-        </div>
-      </div>
-    </div>
   </div>
 
 
