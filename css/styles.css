@@ -1256,31 +1256,6 @@ body::-webkit-scrollbar-thumb {
     font-size: large;
   }  
 
-  /* .podcast li {
-    list-style-type: none;
-    margin-top: .8em;
-    margin-bottom: .8em;
-    font-weight: bold;
-  } */
-
-  /* .pod-image {
-    display: flex;
-    width: 30vw;
-    justify-content: center;
-    margin-bottom: .8em;
-  } */
-
-  /* .pod-image img {
-    width: 50vw;
-    display: flex;
-
-  } */
-
-  /* .pod-background {
-    background-color: beige;
-    padding: .5em;
-  } */
-
   .artist {
     display: flex;
     flex-direction: column;
@@ -1333,6 +1308,8 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 4%;
+    margin-bottom: 1em;
   }
   .artist-p {
     width: 35vw;
