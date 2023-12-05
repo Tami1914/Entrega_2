@@ -80,3 +80,26 @@ body {
 .container{
   padding: 20em;
 }
+
+.header {
+  width: 100vw;
+  height: 56px;
+  background-color: aquamarine;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header span {
+  color: black;
+  width: 10vw;
+  margin-top: .2em;
+  margin-left: .2em;
+  font-size: xx-large;
+}
+
+.header h2 {
+  color: black;
+  width: 100vw;
+  padding-top: .4em;
+  padding-right: 1.8em;
+}
